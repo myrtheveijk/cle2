@@ -1,0 +1,428 @@
+//------------ Hotel De Gravin ------------//
+@import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans|Sacramento');
+
+//------------ Variabelen ------------//
+
+$sm:        (min-width : 768px);
+$md:        (min-width : 992px);
+$lg:        (min-width : 1200px);
+
+$primary-color:     #D6B996; /*Beige*/
+$secondairy-color:  #283144; /*Blauw*/
+$tertiaire-color:   #F7F7F7; /*Grijs*/
+
+$font-title:    'Lora', serif;
+$font-subtitle: 'Sacramento', cursive;
+$font-standard: 'Open Sans', sans-serif;
+
+//------------ Body ------------//
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+//------------ Navigatie ------------//
+
+#wpr-nav {
+  width: 100vw;
+  background: #fff;
+  position: fixed;
+  //-webkit-box-shadow: 0px 2px 16px 0px rgba(50, 50, 50, 0.4);
+  //-moz-box-shadow:    0px 2px 16px 0px rgba(50, 50, 50, 0.4);
+  //box-shadow:         0px 2px 16px 0px rgba(50, 50, 50, 0.4);
+
+  #cnr-nav {
+    max-width: 90vw;
+    padding: 10px 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+#logo {
+  width: 12%;
+  min-width: 100px;
+}
+
+.admin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .admin-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin-style {
+    margin: 0 10px 0 5px;
+    color: $secondairy-color;
+    font: 500 1.4rem/1.2 $font-subtitle;
+
+    .fa {
+      font-size: 1.6em;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .admin {
+    .admin-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .admin-style {
+      margin: 0 20px 0 10px;
+      font-size: 2.2em;
+
+      .fa {
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+//------------ Header ------------//
+
+#wpr-header {
+  padding: 80px 0 0;
+  width: 100vw;
+
+  #cnr-header {
+    max-width: 90vw;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+    height: 40vh;
+    background-image: url("../img/HotelDeGravin-window.png");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  #wpr-header {
+    padding: 120px 0 0;
+
+    #cnr-header {
+      margin: 0 auto 60px;
+      height: 70vh;
+    }
+  }
+}
+
+//------------ Intoductie ------------//
+
+#wpr-intro {
+  background: $primary-color;
+  width: 100vw;
+
+  #cnr-intro {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+
+    .intro-title {
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+
+    .intro-text {
+      p {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.standard-block-style {
+  .intro-title {
+    width: 90vw;
+    padding: 0 0 10px;
+    font: 700 1.4rem/1.6 $font-title;
+  }
+
+  .intro-text {
+    width: 90vw;
+
+    p {
+      padding: 10px 0 0;
+      font: 500 0.9rem/2.2 $font-standard;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+  #wpr-intro {
+    #cnr-intro {
+      padding: 60px 0;
+      flex-direction: row;
+
+      .intro-title {
+        border-bottom: none;
+        border-right: 1px solid #fff;
+      }
+    }
+  }
+  .standard-block-style {
+    .intro-title {
+      width: 35vw;
+      padding: 0 30px;
+      font: 700 1.8rem/1.6 $font-title;
+    }
+
+    .intro-text {
+      width: 65vw;
+
+      p {
+        padding: 0 50px;
+      }
+    }
+  }
+}
+
+//------------ Beschikbaarheid ------------//
+
+#wpr-available {
+  widht: 100vw;
+
+  #cnr-available {
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    #available-info {
+      width:100vw;
+
+      img {
+        width: 100vw;
+      }
+
+      #available-info-block {
+        padding: 30px 20px 30px;
+
+        h3 {
+          font: 700 1.4rem/1.6 $font-title;
+          color: $secondairy-color;
+          padding: 0 0 20px;
+        }
+
+        hr {
+          border-color: $secondairy-color;
+          width: 50px;
+          height: 1px;
+        }
+
+        p {
+          font: 500 0.9rem/2.2 $font-standard;
+          color: $secondairy-color;
+          margin: 20px 0 0;
+        }
+      }
+    }
+    #available-content {
+      width: 100vw;
+      background: green;
+      padding: 60px 50px;
+
+      h3 {
+        font: 700 1.4rem/1.6 $font-title;
+        color: $secondairy-color;
+        padding: 0 0 20px;
+      }
+
+      form {
+        background: #fff;
+        .day {
+          display: flex;
+          flex-direction: row;
+          padding: 16px 20px;
+          border-radius: 50px;
+
+          p {
+            padding: 0 10px;
+            font: 700 1rem/1.6 $font-title;
+          }
+
+          .day-style {
+            min-width: 60px;
+          }
+          label {
+            input {
+  
+            }
+          }
+        }
+
+        .day:nth-child(odd){
+          background-color: $tertiaire-color;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px){
+  #wpr-available {
+    #cnr-available {
+      flex-direction: row;
+
+      #available-info {
+        #available-info-block {
+          padding: 30px 40px 60px 50px;
+
+          h3 {
+            font: 700 1.8rem/1.4 $font-title;
+            padding: 20px 0;
+          }
+
+          p {
+            font: 500 0.9rem/2.2 $font-standard;
+            margin: 20px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px){
+  #wpr-available {
+    #cnr-available {
+      #available-info {
+        width: 37vw;
+
+        img {
+          width: 37vw;
+        }
+
+        #available-info-block {
+          padding: 30px 40px 60px 50px;
+        }
+      }
+      #available-content {
+        width: 63vw;
+      }
+    }
+  }
+}
+
+//------------ Vragen ------------//
+
+#wpr-contact {
+  background: $tertiaire-color;
+  width: 100vw;
+
+  #cnr-contact {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+
+    .intro-title {
+      color: $secondairy-color;
+      border-bottom: 1px solid $secondairy-color;
+    }
+
+    .intro-text {
+      p {
+        color: $secondairy-color;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+  #wpr-contact {
+    #cnr-contact {
+      padding: 60px 0;
+      flex-direction: row;
+
+      .intro-title {
+        border-bottom: none;
+        border-right: 1px solid $secondairy-color;
+      }
+    }
+  }
+}
+
+//------------ Footer ------------//
+
+#wpr-footer {
+  width: 100vw;
+  background: $primary-color;
+
+  #cnr-footer {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#footer-logo {
+  width: 30%;
+  height: 30%;
+  margin: 0 0 20px;
+}
+
+#footer-owner {
+  p {
+    font: 500 2rem/1.2 $font-subtitle;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  #wpr-footer {
+    #cnr-footer {
+      padding: 30px 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  #footer-logo {
+    width: 12%;
+    height: 12%;
+    margin: 0;
+  }
+
+  #footer-owner {
+    p {
+      font: 500 2rem/1.2 $font-subtitle;
+    }
+  }
+}
+
+//------------ Footer ------------//
+
+#wpr-footer-end {
+  width: 100vw;
+  background: #B2936D;
+
+  #cnr-footer-end {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    #disclaimer {
+      padding: 5px 0;
+      color: $primary-color;
+      font: 800 1rem/1.2 $font-title;
+    }
+  }
+}

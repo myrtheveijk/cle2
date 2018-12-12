@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css?family=Lora|Open+Sans|Sacramento");
+/*Beige*/
+/*Blauw*/
+/*Grijs*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+#wpr-nav {
+  width: 100vw;
+  background: #fff;
+  position: fixed;
+}
+#wpr-nav #cnr-nav {
+  max-width: 90vw;
+  padding: 10px 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#logo {
+  width: 12%;
+  min-width: 100px;
+}
+
+.admin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.admin .admin-icon {
+  width: 30px;
+  height: 30px;
+}
+.admin .admin-style {
+  margin: 0 10px 0 5px;
+  color: #283144;
+  font: 500 1.4rem/1.2 "Sacramento", cursive;
+}
+.admin .admin-style .fa {
+  font-size: 1.6em;
+}
+
+@media only screen and (min-width: 768px) {
+  .admin .admin-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .admin .admin-style {
+    margin: 0 20px 0 10px;
+    font-size: 2.2em;
+  }
+  .admin .admin-style .fa {
+    font-size: 2em;
+  }
+}
+#wpr-header {
+  padding: 80px 0 0;
+  width: 100vw;
+}
+#wpr-header #cnr-header {
+  max-width: 90vw;
+  margin: 0 auto 20px;
+  padding: 0 20px;
+  height: 40vh;
+  background-image: url("../img/HotelDeGravin-window.png");
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  #wpr-header {
+    padding: 120px 0 0;
+  }
+  #wpr-header #cnr-header {
+    margin: 0 auto 60px;
+    height: 70vh;
+  }
+}
+#wpr-intro {
+  background: #D6B996;
+  width: 100vw;
+}
+#wpr-intro #cnr-intro {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+#wpr-intro #cnr-intro .intro-title {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+#wpr-intro #cnr-intro .intro-text p {
+  color: #fff;
+}
+
+.standard-block-style .intro-title {
+  width: 90vw;
+  padding: 0 0 10px;
+  font: 700 1.4rem/1.6 "Lora", serif;
+}
+.standard-block-style .intro-text {
+  width: 90vw;
+}
+.standard-block-style .intro-text p {
+  padding: 10px 0 0;
+  font: 500 0.9rem/2.2 "Open Sans", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  #wpr-intro #cnr-intro {
+    padding: 60px 0;
+    flex-direction: row;
+  }
+  #wpr-intro #cnr-intro .intro-title {
+    border-bottom: none;
+    border-right: 1px solid #fff;
+  }
+
+  .standard-block-style .intro-title {
+    width: 35vw;
+    padding: 0 30px;
+    font: 700 1.8rem/1.6 "Lora", serif;
+  }
+  .standard-block-style .intro-text {
+    width: 65vw;
+  }
+  .standard-block-style .intro-text p {
+    padding: 0 50px;
+  }
+}
+#wpr-available {
+  widht: 100vw;
+}
+#wpr-available #cnr-available {
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+#wpr-available #cnr-available #available-info {
+  width: 100vw;
+}
+#wpr-available #cnr-available #available-info img {
+  width: 100vw;
+}
+#wpr-available #cnr-available #available-info #available-info-block {
+  padding: 30px 20px 30px;
+}
+#wpr-available #cnr-available #available-info #available-info-block h3 {
+  font: 700 1.4rem/1.6 "Lora", serif;
+  color: #283144;
+  padding: 0 0 20px;
+}
+#wpr-available #cnr-available #available-info #available-info-block hr {
+  border-color: #283144;
+  width: 50px;
+  height: 1px;
+}
+#wpr-available #cnr-available #available-info #available-info-block p {
+  font: 500 0.9rem/2.2 "Open Sans", sans-serif;
+  color: #283144;
+  margin: 20px 0 0;
+}
+#wpr-available #cnr-available #available-content {
+  width: 100vw;
+  background: green;
+  padding: 60px 50px;
+}
+#wpr-available #cnr-available #available-content h3 {
+  font: 700 1.4rem/1.6 "Lora", serif;
+  color: #283144;
+  padding: 0 0 20px;
+}
+#wpr-available #cnr-available #available-content form {
+  background: #fff;
+}
+#wpr-available #cnr-available #available-content form .day {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 20px;
+  border-radius: 50px;
+}
+#wpr-available #cnr-available #available-content form .day p {
+  padding: 0 10px;
+  font: 700 1rem/1.6 "Lora", serif;
+}
+#wpr-available #cnr-available #available-content form .day .day-style {
+  min-width: 60px;
+}
+#wpr-available #cnr-available #available-content form .day:nth-child(odd) {
+  background-color: #F7F7F7;
+}
+
+@media only screen and (min-width: 768px) {
+  #wpr-available #cnr-available {
+    flex-direction: row;
+  }
+  #wpr-available #cnr-available #available-info #available-info-block {
+    padding: 30px 40px 60px 50px;
+  }
+  #wpr-available #cnr-available #available-info #available-info-block h3 {
+    font: 700 1.8rem/1.4 "Lora", serif;
+    padding: 20px 0;
+  }
+  #wpr-available #cnr-available #available-info #available-info-block p {
+    font: 500 0.9rem/2.2 "Open Sans", sans-serif;
+    margin: 20px 0 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #wpr-available #cnr-available #available-info {
+    width: 37vw;
+  }
+  #wpr-available #cnr-available #available-info img {
+    width: 37vw;
+  }
+  #wpr-available #cnr-available #available-info #available-info-block {
+    padding: 30px 40px 60px 50px;
+  }
+  #wpr-available #cnr-available #available-content {
+    width: 63vw;
+  }
+}
+#wpr-contact {
+  background: #F7F7F7;
+  width: 100vw;
+}
+#wpr-contact #cnr-contact {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+#wpr-contact #cnr-contact .intro-title {
+  color: #283144;
+  border-bottom: 1px solid #283144;
+}
+#wpr-contact #cnr-contact .intro-text p {
+  color: #283144;
+}
+
+@media only screen and (min-width: 768px) {
+  #wpr-contact #cnr-contact {
+    padding: 60px 0;
+    flex-direction: row;
+  }
+  #wpr-contact #cnr-contact .intro-title {
+    border-bottom: none;
+    border-right: 1px solid #283144;
+  }
+}
+#wpr-footer {
+  width: 100vw;
+  background: #D6B996;
+}
+#wpr-footer #cnr-footer {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer-logo {
+  width: 30%;
+  height: 30%;
+  margin: 0 0 20px;
+}
+
+#footer-owner p {
+  font: 500 2rem/1.2 "Sacramento", cursive;
+}
+
+@media only screen and (min-width: 768px) {
+  #wpr-footer #cnr-footer {
+    padding: 30px 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #footer-logo {
+    width: 12%;
+    height: 12%;
+    margin: 0;
+  }
+
+  #footer-owner p {
+    font: 500 2rem/1.2 "Sacramento", cursive;
+  }
+}
+#wpr-footer-end {
+  width: 100vw;
+  background: #B2936D;
+}
+#wpr-footer-end #cnr-footer-end {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#wpr-footer-end #cnr-footer-end #disclaimer {
+  padding: 5px 0;
+  color: #D6B996;
+  font: 800 1rem/1.2 "Lora", serif;
+}
+
+/*# sourceMappingURL=style.css.map */
