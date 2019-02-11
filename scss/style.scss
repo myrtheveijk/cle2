@@ -117,28 +117,28 @@ $font-standard: 'Open Sans', sans-serif;
   }
 }
 
-//------------ Intoductie ------------//
+//------------ Introductie ------------//
 
 #wpr-intro {
   background: $primary-color;
   width: 100vw;
+}
 
-  #cnr-intro {
-    width: 90vw;
-    margin: 0 auto;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
+#cnr-intro {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
 
-    .intro-title {
+  .intro-title {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  .intro-text {
+    p {
       color: #fff;
-      border-bottom: 1px solid #fff;
-    }
-
-    .intro-text {
-      p {
-        color: #fff;
-      }
     }
   }
 }
@@ -161,15 +161,13 @@ $font-standard: 'Open Sans', sans-serif;
 }
 
 @media only screen and (min-width: 768px){
-  #wpr-intro {
-    #cnr-intro {
-      padding: 60px 0;
-      flex-direction: row;
+  #cnr-intro {
+    padding: 60px 0;
+    flex-direction: row;
 
-      .intro-title {
-        border-bottom: none;
-        border-right: 1px solid #fff;
-      }
+    .intro-title {
+      border-bottom: none;
+      border-right: 1px solid #fff;
     }
   }
   .standard-block-style {
@@ -192,8 +190,6 @@ $font-standard: 'Open Sans', sans-serif;
 //------------ Beschikbaarheid ------------//
 
 #wpr-available {
-  widht: 100vw;
-
   #cnr-available {
     width: 100vw;
     margin: 0 auto;
@@ -202,6 +198,7 @@ $font-standard: 'Open Sans', sans-serif;
 
     #available-info {
       width:100vw;
+      background: $tertiaire-color;
 
       img {
         width: 100vw;
@@ -229,10 +226,10 @@ $font-standard: 'Open Sans', sans-serif;
         }
       }
     }
+
     #available-content {
       width: 100vw;
-      background: green;
-      padding: 60px 50px;
+      padding: 30px 20px;
 
       h3 {
         font: 700 1.4rem/1.6 $font-title;
@@ -242,29 +239,81 @@ $font-standard: 'Open Sans', sans-serif;
 
       form {
         background: #fff;
+        display: block;
+
         .day {
-          display: flex;
-          flex-direction: row;
-          padding: 16px 20px;
-          border-radius: 50px;
+          width: 100%;
+          display: inline-flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px 20px;
+          border-radius: 4px;
 
           p {
             padding: 0 10px;
-            font: 700 1rem/1.6 $font-title;
+            font: 700 1.2rem/1.6 $font-title;
+            min-width: 140px;
           }
 
           .day-style {
             min-width: 60px;
           }
+
           label {
-            input {
-  
-            }
+            background: transparent;
+            border: 1px solid $secondairy-color;
+            color: $secondairy-color;
+            font: 700 0.9rem/1.6 $font-title;
+            border-radius: 100px;
+            padding: 10px 20px;
+            margin: 4px 0;
+            min-width: 100px;
+            text-align: center;
+          }
+
+          input {
+            display: none;
+          }
+
+          input[type=checkbox]:checked + label {
+            background: #5E7DD4;
+            border: 1px solid #5e7dd4;
+            color: #fff;
+          }
+
+          &:nth-child(odd) {
+            background-color: $tertiaire-color;
           }
         }
 
-        .day:nth-child(odd){
-          background-color: $tertiaire-color;
+        #comment {
+          display: flex;
+          flex-direction: column;
+
+          label {
+            font: 700 1.2rem/1.6 $font-title;
+            margin: 30px 0 10px;
+            color: $secondairy-color;
+          }
+          textarea {
+            min-height: 140px;
+            max-width: 560px;
+            border-radius: 5px;
+            background: $tertiaire-color;
+            border: 1px solid $tertiaire-color;
+            padding: 10px;
+            font: 700 0.9rem/1.6 $font-standard;
+          }
+        }
+
+        button {
+          margin: 30px 0 0;
+          font: 500 1rem/1.6 $font-title;
+          padding: 10px 20px;
+          background: $secondairy-color;
+          border: 1px solid $secondairy-color;
+          border-radius: 5px;
+          color: #fff;
         }
       }
     }
@@ -273,7 +322,7 @@ $font-standard: 'Open Sans', sans-serif;
 @media only screen and (min-width: 768px){
   #wpr-available {
     #cnr-available {
-      flex-direction: row;
+      flex-direction: column;
 
       #available-info {
         #available-info-block {
@@ -290,6 +339,33 @@ $font-standard: 'Open Sans', sans-serif;
           }
         }
       }
+
+      #available-content {
+        padding: 60px 50px;
+
+        form {
+          .day {
+            width: auto;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 50px;
+
+            p {
+              font: 700 1rem/1.6 $font-title;
+            }
+
+            .day-style {
+            }
+
+            label {
+              margin: 0 4px;
+            }
+          }
+        }
+
+        textarea {
+        }
+      }
     }
   }
 }
@@ -297,6 +373,7 @@ $font-standard: 'Open Sans', sans-serif;
 @media only screen and (min-width: 992px){
   #wpr-available {
     #cnr-available {
+      flex-direction: row;
       #available-info {
         width: 37vw;
 
@@ -423,6 +500,157 @@ $font-standard: 'Open Sans', sans-serif;
       padding: 5px 0;
       color: $primary-color;
       font: 800 1rem/1.2 $font-title;
+    }
+  }
+}
+
+//------------ ADMIN ------------//
+
+#wpr-intro-admin {
+  background: $secondairy-color;
+}
+
+#wpr-calendar-admin {
+  width: 100vw;
+
+  #cnr-calendar-admin {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #wpr-calendar-admin {
+    width: 100vw;
+
+    #cnr-calendar-admin {
+      width: 90vw;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+  }
+}
+
+.calendar-title {
+  margin: 5px auto;
+  max-width: 90vw;
+  border: 1px solid $primary-color;
+  padding: 10px 15px;
+
+  h3 {
+    font: 700 1.4rem/1.6 $font-title;
+    text-align: center;
+  }
+
+  p {
+    font: 700 1rem/1.6 $font-title;
+    text-align: center;
+  }
+}
+
+.calendar-planning {
+  overflow-x:auto;
+  border: 1px solid $primary-color;
+  margin: 5px auto;
+  display: flex;
+  justify-content: flex-start;
+
+  table {
+    background: #fff;
+    text-align: center;
+    border-spacing: 0;
+    width: 100vw;
+
+    thead {
+      background: $primary-color;
+      border: 1px solid $primary-color;
+
+      tr {
+        th {
+          padding: 15px 2px;
+          font: 700 0.8rem/1.6 $font-title;
+          color: #fff;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          border: 1px solid $primary-color;
+          font: 700 0.8rem/1.6 $font-title;
+          padding: 15px 2px;
+
+          select {
+            border: none;
+            font: 700 0.8rem/1.6 $font-title;
+            background: #fff;
+          }
+        }
+
+        .morning {
+          color: #fff;
+          background: $secondairy-color;
+          border-color: $secondairy-color;
+        }
+
+        .afternoon {
+          color: #fff;
+          background: #495877;
+          border-color: #495877;
+        }
+
+        .evening {
+          color: #fff;
+          background: #203767;
+          border-color: #203767;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1060px) {
+  .calendar-title {
+    margin: 20px auto;
+    max-width: 30vw;
+    padding: 20px 15px;
+
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .calendar-planning {
+    margin: 20px auto;
+    justify-content: center;
+
+    table {
+      border-spacing: 10px;
+
+      thead {
+        tr {
+          th {
+            font-size: 1rem;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            font-size: 1rem;
+
+            select {
+              border: none;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
     }
   }
 }
